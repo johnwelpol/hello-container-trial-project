@@ -15,7 +15,7 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('bl_number')->nullable();
+            $table->string('bl_number');
             $table->bigInteger('bl_release_user_id');
             $table->dateTime('bl_release_date')->nullable();
             $table->boolean('freight_payer_self');
