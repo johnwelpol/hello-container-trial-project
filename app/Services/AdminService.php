@@ -18,4 +18,16 @@ class AdminService
     {
         return User::where('email', config('system.administrator.email'))->firstOrFail();
     }
+
+
+    /**
+     * Notify the admin
+     *
+     * @param mixed $instance
+     * @return void
+     */
+    public static function notify($instance)
+    {
+        return self::getAdminDetails()->notify($instance);
+    }
 }
