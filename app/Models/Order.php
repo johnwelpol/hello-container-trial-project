@@ -9,6 +9,14 @@ class Order extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'bl_number',
+        'bl_release_user_id',
+        'bl_release_date',
+        'freight_payer_self',
+        'contract_number',
+    ];
+
     /**
      * Establish relationship between User and order model.
      *
